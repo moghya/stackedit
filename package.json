@@ -19,7 +19,9 @@
     "postversion": "git push origin master --tags && npm publish",
     "patch": "npm version patch -m \"Tag v%s\"",
     "minor": "npm version minor -m \"Tag v%s\"",
-    "major": "npm version major -m \"Tag v%s\""
+    "major": "npm version major -m \"Tag v%s\"",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "dependencies": {
     "aws-sdk": "^2.133.0",
@@ -51,7 +53,8 @@
     "tmp": "^0.0.33",
     "turndown": "^4.0.1",
     "vue": "^2.3.3",
-    "vuex": "^2.3.1"
+    "vuex": "^2.3.1",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "autoprefixer": "^6.7.2",
@@ -118,5 +121,6 @@
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
-  ]
+  ],
+  "snyk": true
 }
